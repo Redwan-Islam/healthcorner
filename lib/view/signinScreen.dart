@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthcorner/view/forgetScreen.dart';
 import 'package:healthcorner/view/liveScreen.dart';
 import 'package:lottie/lottie.dart';
 
@@ -18,6 +19,7 @@ class _signinScreenState extends State<signinScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue.shade900,
         title: const Text('Sign in'),
       ),
       body: SingleChildScrollView(
@@ -90,7 +92,7 @@ class _signinScreenState extends State<signinScreen> {
               ),
               Material(
                 elevation: 5.0,
-                color: Colors.greenAccent,
+                color: Colors.blue.shade900,
                 borderRadius: BorderRadius.circular(30.0),
                 child: MaterialButton(
                   onPressed: () {
@@ -101,11 +103,25 @@ class _signinScreenState extends State<signinScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Text('Sign In'),
+                      Text(
+                        'Sign In',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ],
                   ),
                 ),
               ),
+              TextButton(
+                  onPressed: (() {
+                    Navigator.pushNamed(context, forgetPassword.routeNames);
+                  }),
+                  child: const Text(
+                    'Forget Passoword?',
+                    style: TextStyle(
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ))
             ],
           ),
         ),

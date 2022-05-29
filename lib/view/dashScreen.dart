@@ -24,6 +24,7 @@ class _dashScreenState extends State<dashScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue.shade900,
         title: const Text('Dash Screen'),
       ),
       drawer: const Drawer(),

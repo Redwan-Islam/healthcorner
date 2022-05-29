@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
-  List data = [
+  List data = const [
     {"color": Color(0xffff6968)},
     {"color": Color(0xff7a54ff)},
     {"color": Color(0xffff8f61)},

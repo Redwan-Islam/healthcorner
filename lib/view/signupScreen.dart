@@ -18,6 +18,7 @@ class _signupScreenState extends State<signupScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue.shade900,
         title: const Text('Sign Up'),
       ),
       body: SingleChildScrollView(
@@ -90,7 +91,7 @@ class _signupScreenState extends State<signupScreen> {
               ),
               Material(
                 elevation: 5.0,
-                color: Colors.greenAccent,
+                color: Colors.blue.shade900,
                 borderRadius: BorderRadius.circular(30.0),
                 child: MaterialButton(
                   onPressed: () {},
@@ -99,7 +100,10 @@ class _signupScreenState extends State<signupScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Text('Sign Up'),
+                      Text(
+                        'Sign Up',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ],
                   ),
                 ),

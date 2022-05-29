@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:healthcorner/view/SplashScreen.dart';
 import 'package:healthcorner/view/dashScreen.dart';
+import 'package:healthcorner/view/forgetScreen.dart';
 import 'package:healthcorner/view/liveScreen.dart';
 import 'package:healthcorner/view/signinScreen.dart';
 import 'package:healthcorner/view/signupScreen.dart';
@@ -18,13 +19,14 @@ class myApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: SplashScreen(),
+      home: const SplashScreen(),
       routes: {
-        welcomeScreen.routeNames: (context) => welcomeScreen(),
-        signinScreen.routeNames: (context) => signinScreen(),
-        signupScreen.routeNames: (context) => signupScreen(),
-        dashScreen.routeNames: (context) => dashScreen(),
-        liveScreen.routeNames: (context) => liveScreen(),
+        welcomeScreen.routeNames: (context) => const welcomeScreen(),
+        signinScreen.routeNames: (context) => const signinScreen(),
+        signupScreen.routeNames: (context) => const signupScreen(),
+        dashScreen.routeNames: (context) => const dashScreen(),
+        liveScreen.routeNames: (context) => const liveScreen(),
+        forgetPassword.routeNames: (context) => const forgetPassword(),
       },
     );
   }

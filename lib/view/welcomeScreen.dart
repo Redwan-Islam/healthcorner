@@ -15,7 +15,6 @@ class _welcomeScreenState extends State<welcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue.shade900,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -27,11 +26,11 @@ class _welcomeScreenState extends State<welcomeScreen> {
               height: 400,
             ),
             const SizedBox(
-              height: 20,
+              height: 60,
             ),
             Material(
               elevation: 5.0,
-              color: Colors.white,
+              color: Colors.blue.shade900,
               borderRadius: BorderRadius.circular(30.0),
               child: MaterialButton(
                 onPressed: () {
@@ -42,7 +41,10 @@ class _welcomeScreenState extends State<welcomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Text('Sign In'),
+                    Text(
+                      'Sign In',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ],
                 ),
               ),
@@ -52,7 +54,7 @@ class _welcomeScreenState extends State<welcomeScreen> {
             ),
             Material(
               elevation: 5.0,
-              color: Colors.white,
+              color: Colors.blue.shade900,
               borderRadius: BorderRadius.circular(30.0),
               child: MaterialButton(
                 onPressed: () {
@@ -63,7 +65,7 @@ class _welcomeScreenState extends State<welcomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Text('Sign Up'),
+                    Text('Sign Up', style: TextStyle(color: Colors.white)),
                   ],
                 ),
               ),

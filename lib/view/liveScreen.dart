@@ -14,6 +14,7 @@ class _liveScreenState extends State<liveScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue.shade900,
         title: const Text('Live'),
       ),
       body: Padding(
@@ -72,7 +73,7 @@ class _liveScreenState extends State<liveScreen> {
             ),
             Material(
               elevation: 5.0,
-              color: Colors.greenAccent,
+              color: Colors.blue.shade900,
               borderRadius: BorderRadius.circular(30.0),
               child: MaterialButton(
                 onPressed: () {
@@ -83,7 +84,10 @@ class _liveScreenState extends State<liveScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Text('Dashboard'),
+                    Text(
+                      'Dashboard',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ],
                 ),
               ),
