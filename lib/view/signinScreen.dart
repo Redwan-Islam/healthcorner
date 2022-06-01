@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthcorner/view/doctorScreen.dart';
 import 'package:healthcorner/view/forgetScreen.dart';
 import 'package:healthcorner/view/liveScreen.dart';
 import 'package:lottie/lottie.dart';
@@ -21,6 +22,17 @@ class _signinScreenState extends State<signinScreen> {
       appBar: AppBar(
         backgroundColor: Colors.blue.shade900,
         title: const Text('Sign in'),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, doctorScreen.routeNames);
+              },
+              icon: const Icon(Icons.account_circle),
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
