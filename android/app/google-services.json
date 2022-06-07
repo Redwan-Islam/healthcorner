@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "357811857441",
+    "project_id": "healthcorner-b7b22",
+    "storage_bucket": "healthcorner-b7b22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357811857441:android:220b787c95590a5ce39b60",
+        "android_client_info": {
+          "package_name": "com.example.healthcorner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "357811857441-alkncovj4nr540764fnnqddlcg98t787.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_ciG2Hni5nYZL_dcycfViw6HFSBc0SGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "357811857441-alkncovj4nr540764fnnqddlcg98t787.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

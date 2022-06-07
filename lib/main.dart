@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:healthcorner/view/SplashScreen.dart';
 import 'package:healthcorner/view/dashScreen.dart';
@@ -8,7 +9,9 @@ import 'package:healthcorner/view/signinScreen.dart';
 import 'package:healthcorner/view/signupScreen.dart';
 import 'package:healthcorner/view/welcomeScreen.dart';
 
-void main(List<String> args) {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(myApp());
 }
 

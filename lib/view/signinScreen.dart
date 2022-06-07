@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:healthcorner/view/dashScreen.dart';
 import 'package:healthcorner/view/doctorScreen.dart';
 import 'package:healthcorner/view/forgetScreen.dart';
 import 'package:healthcorner/view/liveScreen.dart';
@@ -13,6 +15,7 @@ class signinScreen extends StatefulWidget {
 }
 
 class _signinScreenState extends State<signinScreen> {
+  final _auth = FirebaseAuth.instance;
   late String email;
   late String password;
   String _errMsg = '';
@@ -107,8 +110,21 @@ class _signinScreenState extends State<signinScreen> {
                 color: Colors.blue.shade900,
                 borderRadius: BorderRadius.circular(30.0),
                 child: MaterialButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, liveScreen.routeNames);
+                  onPressed: () async {
+                    try {
+                      final user = await _auth.signInWithEmailAndPassword(
+                          email: email, password: password);
+                      // ignore: unnecessary_null_comparison
+                      if (user != null) {
+                        // ignore: use_build_context_synchronously
+                        Navigator.popAndPushNamed(
+                            context, dashScreen.routeNames);
+                      }
+                    } on FirebaseAuthException catch (e) {
+                      setState(() {
+                        _errMsg = e.message!;
+                      });
+                    }
                   },
                   minWidth: 200.0,
                   height: 42.0,
@@ -133,7 +149,11 @@ class _signinScreenState extends State<signinScreen> {
                         fontSize: 15.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.black),
-                  ))
+                  )),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(_errMsg),
             ],
           ),
         ),

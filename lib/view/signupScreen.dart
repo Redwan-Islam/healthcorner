@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:healthcorner/view/dashScreen.dart';
+import 'package:healthcorner/view/welcomeScreen.dart';
 import 'package:lottie/lottie.dart';
 
 class signupScreen extends StatefulWidget {
@@ -11,9 +13,10 @@ class signupScreen extends StatefulWidget {
 }
 
 class _signupScreenState extends State<signupScreen> {
+  bool showSpinner = false;
+  final _auth = FirebaseAuth.instance;
   late String email;
   late String password;
-  String _errMsg = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,7 +97,20 @@ class _signupScreenState extends State<signupScreen> {
                 color: Colors.blue.shade900,
                 borderRadius: BorderRadius.circular(30.0),
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    try {
+                      final newUser =
+                          await _auth.createUserWithEmailAndPassword(
+                              email: email, password: password);
+                      // ignore: unnecessary_null_comparison
+                      if (newUser != null) {
+                        // ignore: use_build_context_synchronously
+                        Navigator.pushNamed(context, welcomeScreen.routeNames);
+                      }
+                    } catch (e) {
+                      print(e);
+                    }
+                  },
                   minWidth: 200.0,
                   height: 42.0,
                   child: Row(
