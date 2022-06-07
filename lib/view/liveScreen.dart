@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:healthcorner/view/dashScreen.dart';
 
@@ -28,7 +29,7 @@ class _liveScreenState extends State<liveScreen> {
               children: [
                 Image.asset(
                   'assets/heart.png',
-                  height: 128,
+                  height: 100,
                 ),
                 const Text(
                   '86.34',
@@ -37,14 +38,14 @@ class _liveScreenState extends State<liveScreen> {
               ],
             ),
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Image.asset(
                   'assets/blood.png',
-                  height: 128,
+                  height: 100,
                 ),
                 const Text(
                   '96.00',
@@ -53,14 +54,15 @@ class _liveScreenState extends State<liveScreen> {
               ],
             ),
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Image.asset(
                   'assets/thermometer.png',
-                  height: 128,
+                  height: 100,
+                  
                 ),
                 const Text(
                   '32.14',
@@ -69,7 +71,7 @@ class _liveScreenState extends State<liveScreen> {
               ],
             ),
             const SizedBox(
-              height: 80,
+              height: 150,
             ),
             Material(
               elevation: 5.0,
