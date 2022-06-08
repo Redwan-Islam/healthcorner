@@ -131,9 +131,15 @@ class _liveScreenState extends State<liveScreen> {
           replacement: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                CircularProgressIndicator(),
-                Text("Your device isn't connected"),
+              children: [
+                Image.asset(
+                  'assets/cable.png',
+                  height: 130,
+                ),
+                const Text(
+                  "Please connect your device",
+                  style: TextStyle(color: Colors.redAccent),
+                ),
               ],
             ),
           ),
