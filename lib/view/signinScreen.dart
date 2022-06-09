@@ -118,7 +118,7 @@ class _signinScreenState extends State<signinScreen> {
                       if (user != null) {
                         // ignore: use_build_context_synchronously
                         Navigator.popAndPushNamed(
-                            context, dashScreen.routeNames);
+                            context, liveScreen.routeNames);
                       }
                     } on FirebaseAuthException catch (e) {
                       setState(() {
