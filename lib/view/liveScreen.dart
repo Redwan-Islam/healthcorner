@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:healthcorner/controller/remote_service.dart';
 import 'package:healthcorner/model/SensorData.dart';
 import 'package:healthcorner/view/dashScreen.dart';
+import 'package:healthcorner/view/errorScreen.dart';
 
 class liveScreen extends StatefulWidget {
   const liveScreen({Key? key}) : super(key: key);
@@ -79,6 +80,7 @@ class _liveScreenState extends State<liveScreen> {
                               height: 100,
                             ),
                             Text(
+                              // ignore: prefer_interpolation_to_compose_strings
                               posts![index].spo2.toString() + ".00",
                               style: const TextStyle(
                                   fontSize: 40.0, fontWeight: FontWeight.bold),
@@ -151,6 +153,12 @@ class _liveScreenState extends State<liveScreen> {
             ),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, errorScreen.routeNames);
+        },
+        child: const Icon(Icons.edit),
       ),
       drawer: Drawer(),
     );

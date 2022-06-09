@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:healthcorner/view/SplashScreen.dart';
 import 'package:healthcorner/view/dashScreen.dart';
 import 'package:healthcorner/view/doctorScreen.dart';
+import 'package:healthcorner/view/errorScreen.dart';
 import 'package:healthcorner/view/forgetScreen.dart';
 import 'package:healthcorner/view/liveScreen.dart';
 import 'package:healthcorner/view/signinScreen.dart';
@@ -32,6 +33,7 @@ class myApp extends StatelessWidget {
         liveScreen.routeNames: (context) => const liveScreen(),
         forgetPassword.routeNames: (context) => const forgetPassword(),
         doctorScreen.routeNames: (context) => const doctorScreen(),
+        errorScreen.routeNames: (context) => const errorScreen(),
       },
     );
   }
